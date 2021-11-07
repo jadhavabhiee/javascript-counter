@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>counter</title>
+    <style>
+      .container {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .counter {
+        font-size: 60px;
+        color:red;
+        margin: 10px 0;
+      }
+      button {
+        font-size: 20px;
+        padding: 10px 20px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <span class="counter">0</span>
+      <div>
+        <button id='pluse' onclick=" changeCounter(pluse)">+</button>
+        <button id='minus' onclick=" changeCounter(minus)">-</button>
+      </div>
+      <button id="reset" onclick=" changeCounter(reset)">Reset</button>
+    </div>
+    <script>
+      // JAVASCRIPT CODE
+
+      var counter = document.querySelector(".counter");
+      let count = 0;
+
+      function changeCounter(button) {
+        if (button == pluse) {
+          count += 1;
+        } else if (button == minus) {
+          count -= 1;
+        } else if (button == reset) {
+          count = 0;
+        }
+      
+        counter.innerHTML = count;
+      }
+    </script>
+  </body>
+</html>
